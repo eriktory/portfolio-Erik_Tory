@@ -45,13 +45,13 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
 
                     // Images
                     img: ({ node, ...props }) => (
-                        <figure className="my-6 w-full break-inside-avoid">
+                        <figure className="w-full break-inside-avoid mt-6 md:mt-0 flex flex-col items-center">
                             <img
                                 src={props.src}
                                 alt={props.alt}
-                                className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500 border border-gray-900 p-1 shadow-md"
+                                className="max-w-xs w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
                             />
-                            {props.title && <figcaption className="text-sm italic text-center mt-2 text-gray-600 font-serif w-full">{props.title}</figcaption>}
+                            {props.title && <figcaption className="text-sm italic text-center mt-2 text-gray-900 font-serif w-full">{props.title}</figcaption>}
                         </figure>
                     ),
                 }}
