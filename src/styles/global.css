@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+    --font-playfair: "Playfair Display", serif;
+    --font-source: "Source Serif 4", serif;
+    --color-ink: #1a1a1a;
+}
+
+@layer utilities {
+    .bg-paper-shadow {
+        background: linear-gradient(to right, #b8a891, #d7c7ad, #b8a891),
+            linear-gradient(to top, #b8a891, #d7c7ad, #b8a891);
+        background-blend-mode: overlay;
+        box-shadow: inset 100px 0 60px 20px rgba(0, 0, 0, 0.1),
+            /* Izquierda */
+            inset 0 25px 25px -10px rgba(0, 0, 0, 0.4),
+            /* Arriba */
+            inset -100px 0 60px -20px rgba(0, 0, 0, 0.1),
+            /* Derecha */
+            inset 0 -25px 25px -10px rgba(0, 0, 0, 0.4);
+        /* Abajo */
+    }
+}
