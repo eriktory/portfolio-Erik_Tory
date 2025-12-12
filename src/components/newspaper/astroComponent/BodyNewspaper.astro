@@ -17,9 +17,9 @@ const { title } = post.frontmatter;
     <!-- Main Content Grid: Image + Article Columns (preparado para carrusel) -->
     <div class="grid grid-cols-1 md:grid-cols-8 gap-2 md:gap-2 h-[calc(100%-3.75rem)] md:h-[calc(100%-5rem)] overflow-x-hidden">
         
-        <!-- Box 2: Main Image (4 columns) -->
-        <div id="box2" class="col-span-1 md:col-span-4">
-            <div class="w-full h-[40vh] md:h-full border-1 border-black flex items-center justify-center bg-transparent">
+        <!-- Box 2: Main Image (4 columns) - OCULTO EN MÓVIL -->
+        <div id="box2" class="hidden md:block md:col-span-4">
+            <div class="w-full h-full border-1 border-black flex items-center justify-center bg-transparent">
                 <span class="text-xl md:text-2xl font-bold text-neutral-400">MAIN IMAGE</span>
             </div>
         </div>
@@ -35,7 +35,8 @@ const { title } = post.frontmatter;
 <style>
 /* Newspaper column layout - Solo 2 columnas visibles, el resto ocultas para carrusel */
 #article-columns {
-    column-count: 1;
+    /* MÓVIL: 2 columnas visibles */
+    column-count: 2;
     column-gap: 2rem;
     column-rule: 2px solid #000000;
     height: 100%;
