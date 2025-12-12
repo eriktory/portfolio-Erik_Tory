@@ -1,25 +1,54 @@
 ---
+import ArticleNewspaper from '../reactComponent/ArticleNewspaper';
+
+// Fetch the article to get the frontmatter data
+const articles = await Astro.glob('../articles/article_1.md');
+const post = articles[0];
+const { title } = post.frontmatter;
 ---
 
-<div id="body" class="grid grid-cols-8 grid-rows-[auto_auto_1fr] md:grid-rows-[auto_1fr] gap-0 w-full h-full">
+<div id="body" class="grid grid-cols-8 grid-rows-[auto_auto_1fr] md:grid-rows-[auto_1fr] gap-0 md:gap-2 w-full h-full px-0 md:px-2">
 
     <!-- Box 1: Header (Full Width) -->
-    <div id="box1" class="bg-transparent col-span-8 h-16 border border-black flex justify-center items-center"><span class="text-2xl md:text-5xl font-bold">ESTE ES EL TITULAR PRINCIPAL</span></div>
-
-    <!-- Box 2: Left Column (Half Width on Desktop, Full on Mobile) -->
-    <div id="box2" class="bg-transparent col-span-8 md:col-span-4 h-[30vh] md:h-full border border-black flex justify-center items-center text-center"><span class="text-5xl font-bold">AQUI VA<br> UNA IMAGEN</span></div>
-
-    <!-- Box 3 & 4: Right Columns (Quarter Width on Desktop, Half on Mobile) -->
-    <div id="box3" class="bg-transparent col-span-4 md:col-span-2 h-full border border-black flex flex-col items-center p-4">
-
-        <!-- <ArticleNewspaper client:load articleContent={bodyContent} /> -->
-        
+    <div id="box1" class="col-span-8 h-12 md:h-24 border-b md:border-b-2 border-black flex justify-center items-center">
+        <h1 class="text-sm md:text-3xl font-serif font-black uppercase text-center tracking-wide leading-tight">{title}</h1>
     </div>
 
-    <div id="box4" class="bg-transparent col-span-4 md:col-span-2 border border-black min-h-[100px]"></div>
+    <!-- Main Content Area Wrapper -->
+    <div class="col-span-8 grid grid-cols-1 md:grid-cols-4 h-full m-0 p-0">
+        
+        <!-- Box 2: Left Column (Image/Lead) -->
+        <div id="box2" class="col-span-1 md:col-span-2 flex flex-col gap-4">
+            <div class="h-[50vh] md:h-[600px] relative">
+                 <div class="w-full h-full border border-black flex items-center justify-center">
+                    <span class="text-2xl font-bold text-neutral-500">MAIN VISUAL / IMAGE</span>
+                 </div>
+            </div>
+            
+        </div>
 
-    <!-- Hidden Boxes -->
-    <div id="box5" class="bg-teal-600 col-span-1 min-h-[100px] border border-black hidden"></div>
-    <div id="box6" class="bg-teal-600 col-span-1 min-h-[100px] border border-black hidden"></div>
-    <div id="box7" class="bg-teal-600 col-span-1 min-h-[100px] border border-black hidden"></div>
+        <!-- Box 3: Right Column (Article Flow) -->
+        <div id="box3" class="col-span-1 md:col-span-1 border-l-0 md:border-l-2 ml-0 md:ml-3 pl-0 md:pl-4 h-full flex flex-col">
+             <div class="grow overflow-y-auto pr-2 custom-scrollbar">
+                <ArticleNewspaper client:visible />
+            </div>
+        </div>
+
+    </div>
 </div>
+
+<style>
+/* Custom Scrollbar for a cleaner newspaper look */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>

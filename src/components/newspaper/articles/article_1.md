@@ -1,4 +1,6 @@
-## La Importancia del Liderazgo Polimata en la era de la Inteligencia Artificial
+---
+title: "La Importancia del Liderazgo Polimata en la era de la Inteligencia Artificial"
+---
 
 ![](/images/Retrato-ErikTory.webp "Lcdo. Erik Tory")
 
