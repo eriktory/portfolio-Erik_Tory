@@ -31,6 +31,11 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
                     orphans: 3;
                     widows: 3;
                 }
+                
+                /* Reducir margen del primer párrafo */
+                article p:first-of-type {
+                    margin: 0;
+                }
             `}</style>
             <ReactMarkdown
                 components={{
@@ -41,7 +46,30 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
                     h4: ({ ...props }) => <h4 className="text-lg font-sans font-semibold text-black mt-4 mb-2 uppercase" {...props} />,
 
                     // Body text
-                    p: ({ ...props }) => <p className="mb-3 font-serif text-sm leading-relaxed text-gray-900 text-justify" {...props} />,
+                    p: ({ children, ...props }) => {
+                        // Convert children to string to check content
+                        const extractText = (node: any): string => {
+                            if (typeof node === 'string') return node;
+                            if (Array.isArray(node)) return node.map(extractText).join('');
+                            if (node?.props?.children) return extractText(node.props.children);
+                            return '';
+                        };
+
+                        const textContent = extractText(children).trim();
+
+                        // Center if it contains "Polimata" or "Polyvalente"
+                        const shouldCenter = textContent.includes('Polimata') || textContent.includes('Polyvalente');
+
+                        return (
+                            <p
+                                className={`mb-3 font-serif text-sm leading-relaxed text-gray-900 ${shouldCenter ? 'text-center' : 'text-justify'
+                                    }`}
+                                {...props}
+                            >
+                                {children}
+                            </p>
+                        );
+                    },
                     strong: ({ ...props }) => <strong className="font-bold text-black" {...props} />,
                     em: ({ ...props }) => <em className="italic text-gray-800" {...props} />,
 
@@ -63,13 +91,13 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
 
                     // Images
                     img: ({ node, ...props }) => (
-                        <figure className="w-full break-inside-avoid mt-0 flex flex-col items-center">
+                        <figure className="w-full break-inside-avoid flex flex-col items-center">
                             <img
                                 src={props.src}
                                 alt={props.alt}
                                 className="max-w-[200px] w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
                             />
-                            {props.title && <figcaption className="text-sm italic text-center mt-2 text-gray-900 font-serif w-full">{props.title}</figcaption>}
+                            {props.title && <figcaption className="text-sm text-center mt-2 text-gray-900 font-serif font-bold w-full">{props.title}</figcaption>}
                         </figure>
                     ),
                 }}
