@@ -63,7 +63,7 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
 
                     // Images
                     img: ({ node, ...props }) => (
-                        <figure className="w-full break-inside-avoid mt-4 md:mt-0 flex flex-col items-center">
+                        <figure className="w-full break-inside-avoid mt-0 flex flex-col items-center">
                             <img
                                 src={props.src}
                                 alt={props.alt}
