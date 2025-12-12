@@ -14,6 +14,24 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
 
     return (
         <article className={`w-full max-w-none ${className}`}>
+            <style>{`
+                /* Evitar que los elementos se rompan entre columnas */
+                article h1,
+                article h2,
+                article h3,
+                article h4,
+                article blockquote,
+                article figure {
+                    break-inside: avoid;
+                    page-break-inside: avoid;
+                }
+                
+                /* Control de huérfanas y viudas */
+                article p {
+                    orphans: 3;
+                    widows: 3;
+                }
+            `}</style>
             <ReactMarkdown
                 components={{
                     // Typography
@@ -23,13 +41,13 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
                     h4: ({ ...props }) => <h4 className="text-lg font-sans font-semibold text-black mt-4 mb-2 uppercase" {...props} />,
 
                     // Body text
-                    p: ({ ...props }) => <p className="mb-4 font-serif text-lg leading-relaxed text-gray-900 text-justify" {...props} />,
+                    p: ({ ...props }) => <p className="mb-3 font-serif text-sm leading-relaxed text-gray-900 text-justify" {...props} />,
                     strong: ({ ...props }) => <strong className="font-bold text-black" {...props} />,
                     em: ({ ...props }) => <em className="italic text-gray-800" {...props} />,
 
                     // Lists
-                    ul: ({ ...props }) => <ul className="list-disc list-outside ml-6 mb-4 font-serif text-lg text-gray-900" {...props} />,
-                    ol: ({ ...props }) => <ol className="list-decimal list-outside ml-6 mb-4 font-serif text-lg text-gray-900" {...props} />,
+                    ul: ({ ...props }) => <ul className="list-disc list-outside ml-6 mb-3 font-serif text-sm text-gray-900" {...props} />,
+                    ol: ({ ...props }) => <ol className="list-decimal list-outside ml-6 mb-3 font-serif text-sm text-gray-900" {...props} />,
                     li: ({ ...props }) => <li className="mb-1 pl-1" {...props} />,
 
                     // Quotes & Code
@@ -45,11 +63,11 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
 
                     // Images
                     img: ({ node, ...props }) => (
-                        <figure className="w-full break-inside-avoid mt-6 md:mt-0 flex flex-col items-center">
+                        <figure className="w-full break-inside-avoid mt-4 md:mt-0 flex flex-col items-center">
                             <img
                                 src={props.src}
                                 alt={props.alt}
-                                className="max-w-xs w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                                className="max-w-[200px] w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
                             />
                             {props.title && <figcaption className="text-sm italic text-center mt-2 text-gray-900 font-serif w-full">{props.title}</figcaption>}
                         </figure>

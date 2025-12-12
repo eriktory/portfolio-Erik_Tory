@@ -7,48 +7,79 @@ const post = articles[0];
 const { title } = post.frontmatter;
 ---
 
-<div id="body" class="grid grid-cols-8 grid-rows-[auto_auto_1fr] md:grid-rows-[auto_1fr] gap-0 md:gap-2 w-full h-full px-0 md:px-2">
+<div id="body" class="w-full h-full px-2 md:px-4 py-2 overflow-hidden">
 
-    <!-- Box 1: Header (Full Width) -->
-    <div id="box1" class="col-span-8 h-12 md:h-24 border-b md:border-b-2 border-black flex justify-center items-center">
-        <h1 class="text-sm md:text-3xl font-serif font-black uppercase text-center tracking-wide leading-tight">{title}</h1>
+    <!-- Box 1: Article Title (Full Width) -->
+    <div id="box1" class="w-full h-12 md:h-16 border-b md:border-b-2 border-black flex justify-center items-center mb-3 md:mb-4 pb-2 md:pb-3">
+        <h1 class="text-sm md:text-2xl lg:text-3xl font-serif font-black uppercase text-center tracking-wide leading-tight">{title}</h1>
     </div>
 
-    <!-- Main Content Area Wrapper -->
-    <div class="col-span-8 grid grid-cols-1 md:grid-cols-4 h-full m-0 p-0">
+    <!-- Main Content Grid: Image + Article Columns (preparado para carrusel) -->
+    <div class="grid grid-cols-1 md:grid-cols-8 gap-2 md:gap-2 h-[calc(100%-3.75rem)] md:h-[calc(100%-5rem)] overflow-x-hidden">
         
-        <!-- Box 2: Left Column (Image/Lead) -->
-        <div id="box2" class="col-span-1 md:col-span-2 flex flex-col gap-4">
-            <div class="h-[50vh] md:h-[600px] relative">
-                 <div class="w-full h-full border border-black flex items-center justify-center">
-                    <span class="text-2xl font-bold text-neutral-500">MAIN VISUAL / IMAGE</span>
-                 </div>
+        <!-- Box 2: Main Image (4 columns) -->
+        <div id="box2" class="col-span-1 md:col-span-4">
+            <div class="w-full h-[40vh] md:h-full border-1 border-black flex items-center justify-center bg-transparent">
+                <span class="text-xl md:text-2xl font-bold text-neutral-400">MAIN IMAGE</span>
             </div>
-            
         </div>
 
-        <!-- Box 3: Right Column (Article Flow) -->
-        <div id="box3" class="col-span-1 md:col-span-1 border-l-0 md:border-l-2 ml-0 md:ml-3 pl-0 md:pl-4 h-full flex flex-col">
-             <div class="grow overflow-y-auto pr-2 custom-scrollbar">
-                <ArticleNewspaper client:visible />
-            </div>
+        <!-- Article Content Area (4 columns, fluye en múltiples columnas internas)-->
+        <div id="article-columns" class="col-span-1 md:col-span-4 border-l-0 md:border-l-2 border-black pl-0 md:pl-4">
+            <ArticleNewspaper client:visible />
         </div>
 
     </div>
 </div>
 
 <style>
-/* Custom Scrollbar for a cleaner newspaper look */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+/* Newspaper column layout - Solo 2 columnas visibles, el resto ocultas para carrusel */
+#article-columns {
+    column-count: 1;
+    column-gap: 2rem;
+    column-rule: 2px solid #000000;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+
+@media (min-width: 768px) {
+    #article-columns {
+        /* En tablet/desktop: exactamente 2 columnas visibles */
+        column-count: 2;
+        column-fill: auto; /* El contenido fluye verticalmente primero */
+    }
 }
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #888; 
+
+@media (min-width: 1024px) {
+    #article-columns {
+        /* En desktop: mantener 2 columnas visibles */
+        column-count: 2;
+    }
 }
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+
+@media (min-width: 1536px) {
+    #article-columns {
+        /* En XL: mantener 2 columnas visibles */
+        column-count: 2;
+    }
+}
+
+/* Custom Scrollbar - estilo sutil */
+#article-columns::-webkit-scrollbar {
+    width: 4px;
+}
+
+#article-columns::-webkit-scrollbar-track {
+    background: #f9fafb;
+}
+
+#article-columns::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 2px;
+}
+
+#article-columns::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
 }
 </style>
