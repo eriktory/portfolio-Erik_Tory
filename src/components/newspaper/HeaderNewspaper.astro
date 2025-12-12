@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/img/The_Tory_Times_Logo.webp';
+
+const date = new Date().toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<header>
+    
+    <section id="headband-top" class="grid grid-cols-5 gap-2 border-b">
+        
+        <div id="box-left" class="hidden lg:flex bg-transparent min-w-0 justify-center items-center text-center">
+            <div id="ear-left" class="bg-transparent w-[90%] p-[5%] text-center font-bold text-[0.65rem] leading-[1.1]">
+                <p>Para una mejor<br> visualización <br> presione la tecla</p>
+                <p class="mt-4"><span class="text-lg">F11</span></p>
+            </div>
+            
+        </div>
+        <div id="box-center" class="col-span-5 lg:col-span-3 overflow-visible flex justify-center items-center">
+            <Image src={logo} alt="The Tory Times Logo" class="w-[85%] lg:w-[60%] h-auto object-contain max-h-[150px] lg:max-h-[120px]" />
+        </div>
+        <div id="box-right" class="hidden lg:block bg-transparent">
+            
+        </div>
+    </section>
+
+    <section id="headband-bottom" class="headband-bottom font-headline flex justify-between items-center px-1 md:px-4 py-1 mt-1 text-[0.55rem] md:text-[0.7rem] font-bold bg-transparent border-t border-b-[3px]">
+        <span>MMXXV - Vol. I, No. 1</span>
+        <span class="capitalize">{date}</span>
+        <span>Valor: 0.05 BTN/5</span>
+    </section>
+</header>
