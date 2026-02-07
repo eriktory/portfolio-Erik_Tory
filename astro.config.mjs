@@ -14,6 +14,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://eriktory.github.io',
-  base: '/portfolio-Erik_Tory',
+  site: 'https://eriktory.com',
+  base: '/',
 });
