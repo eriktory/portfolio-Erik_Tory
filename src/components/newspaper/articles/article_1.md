@@ -4,9 +4,7 @@ title: "La Importancia del Liderazgo Polimata \nen la era de la Inteligencia Art
 
 ![](/src/assets/images/Retrato-ErikTory-FT.webp "Lcdo. Erik Tory")
 
-***Liderente***
-
-***Polimata - Polivalente***
+***Liderente Polimata  Polivalente***
 
 **Latam, 2025** — En la nueva era de la IA y el cambio digital acelerado, la demanda de líderes que puedan traducir las complejidades técnicas en decisiones estratégicas de alto nivel es más crítica que nunca.  
 Con constantes actualizaciones y avances en el area tecnologica, y ante la vertiginosa evolución de la Inteligencia Artificial, la economía global actual enfrenta niveles de incertidumbre sin precedentes.  
