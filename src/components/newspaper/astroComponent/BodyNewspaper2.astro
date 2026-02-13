@@ -1,8 +1,8 @@
 ---
-import ArticleNewspaper from '../../reactComponent/Section_React_Newspaper/ArticleNewspaper';
+import ArticleNewspaper from '../reactComponent/ArticleNewspaper';
 
 // Fetch the article to get the frontmatter data
-const articles = await Astro.glob('../../articles/article_1.md');
+const articles = await Astro.glob('../articles/article_1.md');
 const post = articles[0];
 const { title } = post.frontmatter;
 ---

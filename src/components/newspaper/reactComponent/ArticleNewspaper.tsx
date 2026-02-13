@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 // Import content from markdown file
-import articleContentDefault from '../../articles/article_1.md?raw';
+import articleContentDefault from '../articles/article_1.md?raw';
 
 interface ArticleProps {
     articleContent?: string;
