@@ -1,8 +1,8 @@
 ---
-import ArticleNewspaper from '../reactComponent/ArticleNewspaper';
+import ArticleNewspaper from '../../reactComponent/Section_React_Newspaper/ArticleNewspaper';
 
 // Fetch the article to get the frontmatter data
-const articles = await Astro.glob('../articles/article_1.md');
+const articles = await Astro.glob('../../articles/article_1.md');
 const post = articles[0];
 const { title } = post.frontmatter;
 ---
@@ -19,7 +19,7 @@ const { title } = post.frontmatter;
         
         <!-- Box 2: Main Image (4 columns) - OCULTO EN MÓVIL -->
         <div id="box2" class="hidden md:block md:col-span-4">
-            <div class="w-full h-full border-1 border-black flex items-center justify-center bg-transparent">
+            <div class="w-full h-full border border-black flex items-center justify-center bg-transparent">
                 <span class="text-xl md:text-2xl font-bold text-neutral-400">MAIN IMAGE</span>
             </div>
         </div>
