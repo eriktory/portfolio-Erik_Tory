@@ -45,7 +45,7 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
 
                         return (
                             <p
-                                className={`mb-3 font-serif text-sm leading-relaxed text-gray-900 ${shouldCenter ? 'text-center' : 'text-justify'
+                                className={`mb-3 text-sm leading-relaxed text-gray-900 ${shouldCenter ? 'text-center' : 'text-justify'
                                     }`}
                                 {...props}
                             >
@@ -64,7 +64,7 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
                                 alt={props.alt}
                                 className="max-w-[200px] w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
                             />
-                            {props.title && <figcaption className="text-sm text-center mt-2 text-gray-900 font-serif font-bold w-full">{props.title}</figcaption>}
+                            {props.title && <figcaption className="text-sm text-center mt-2 text-gray-900 font-bold w-full">{props.title}</figcaption>}
                         </figure>
                     ),
                 }}

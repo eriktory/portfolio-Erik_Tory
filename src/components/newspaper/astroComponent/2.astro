@@ -1,0 +1,113 @@
+---
+---
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<section class="h-full w-full flex flex-col items-center justify-center py-2 overflow-hidden">
+
+    <div class="w-full h-full flex flex-col">
+        
+        <div class="relative h-full">
+            <div class="carousel-track h-full">
+                <div class="card bg-red-500">1</div>
+                <div class="card bg-orange-500">2</div>
+                <div class="card bg-amber-400">3</div>
+                <div class="card bg-emerald-500">4</div>
+                <div class="card bg-blue-500">5</div>
+                <div class="card bg-indigo-600">6</div>
+                <div class="card bg-purple-500">7</div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<style>
+    /* Motor del carrusel basado en tu imagen y requerimientos */
+    .carousel-track {
+        anchor-name: --carousel;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 2px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        align-items: stretch; /* Ensure items stretch to full height */
+    }
+
+    .carousel-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Lógica de visibilidad: 5, 3 y 2 columnas
+       Calculation: (100% - (number_of_gaps * gap_size)) / number_of_columns
+       Gap is 2px.
+    */
+    .carousel-track {
+        grid-auto-columns: calc((100% - (4 * 2px)) / 5);
+        grid-template-rows: 100%; /* Ensure grid row takes full height */
+    }
+
+    @media (max-width: 1024px) {
+        .carousel-track {
+            grid-auto-columns: calc((100% - (2 * 2px)) / 5);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .carousel-track {
+            grid-auto-columns: calc((100% - (1 * 2px)) / 2);
+        }
+    }
+
+    /* Implementación de los botones de la imagen */
+    /* Nota: La pseudo-clase ::scroll-button es experimental y puede no funcionar en todos los navegadores */
+    .carousel-track::scroll-button(*) {
+        position: fixed;
+        position-anchor: --carousel;
+        font-family: "Material Symbols Outlined";
+        background: white;
+        color: #374151;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        z-index: 30;
+        border: 1px solid #f3f4f6;
+        transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .carousel-track::scroll-button(*):hover {
+        background-color: #f9fafb;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-track::scroll-button(right) {
+        position-area: inline-end center;
+        content: 'arrow_forward' / 'Next';
+        margin-right: 25px; /* Adjusted margin to push inside slightly or keep consistent */
+    }
+
+    .carousel-track::scroll-button(left) {
+        position-area: inline-start center;
+        content: 'arrow_back' / 'Previous';
+        margin-left: 25px; /* Adjusted margin */
+    }
+
+    /* Clase base para las tarjetas */
+    .card {
+        scroll-snap-align: start;
+        height: 100%; /* Changed from fixed height to 100% */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+</style>
