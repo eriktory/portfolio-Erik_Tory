@@ -1,11 +1,17 @@
 ---
+// Main.astro
 import Newspaper from './newspaper/astroComponent/Newspaper.astro';
 import Proyectos from './proyectos/Proyectos.astro';
 ---
 <main 
     id="main" 
-    class="grid grid-rows-[auto] mx-auto w-full min-h-dvh bg-cover bg-center bg-no-repeat bg-fixed overflow-x-hidden bg-paper-shadow"
+    class="h-dvh overflow-y-auto snap-y snap-mandatory scroll-smooth bg-paper-shadow"
 >
-    <Newspaper /> 
-    <Proyectos />
+    <section class="h-dvh w-full snap-start shrink-0">
+        <Newspaper /> 
+    </section>
+
+    <section class="h-dvh w-full snap-start shrink-0">
+        <Proyectos />
+    </section>
 </main>
