@@ -40,8 +40,8 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
 
                         const textContent = extractText(children).trim();
 
-                        // Center if it contains "Polimata" or "Polyvalente"
-                        const shouldCenter = textContent.includes('Polimata') || textContent.includes('Polyvalente');
+                        // Center if it contains "Polimata", "Polyvalente" or "LIDERAZGO Y GERENCIA"
+                        const shouldCenter = textContent.includes('Polimata') || textContent.includes('Polyvalente') || textContent.includes('LIDERAZGO Y GERENCIA');
 
                         return (
                             <p

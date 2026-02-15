@@ -1,7 +1,13 @@
 ---
-
+import backgroundImage from '../../assets/images/enConstruccion.jpg';
 ---
-<div id="proyectos"  class="grid grid-rows-[auto] h-dvh overflow-hidden bg-blue-500">
-
-    <h1>Proyectos</h1> 
+<div id="proyectos" class="w-full h-dvh overflow-hidden bg-black flex justify-center items-center">
+    <!-- Imagen centrada ajustada al 75% en desktop y proporcional en móvil -->
+    <img 
+        src={backgroundImage.src} 
+        alt="En Construcción" 
+        class="w-[90%] md:w-[75%] h-auto max-h-[80vh] object-contain"
+    />
+    
+    <h1 class="sr-only">Proyectos</h1> 
 </div>

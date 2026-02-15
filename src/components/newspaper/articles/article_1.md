@@ -1,10 +1,12 @@
 ---
-title: "Liderazgo y Gerencia: \nEl Rol del Liderente en la Gestión Empresarial en la Era de la IA"
+title: "El Rol del Liderente \nen la Gestión Empresarial en la Era de la IA"
 ---
 
 ![](/src/assets/images/Retrato-ErikTory-FT.webp "Lcdo. Erik Tory")
 
 ***Liderente Polimata  Polivalente***
+
+**LIDERAZGO Y GERENCIA**
 
 **Latam, 2025** — En la nueva era de la **IA** y el cambio digital acelerado, la demanda de profesionales que puedan **traducir las complejidades técnicas en decisiones estratégicas de alto nivel** es más crítica que nunca. Con constantes actualizaciones y avances en el área tecnológica, y ante la vertiginosa evolución de la Inteligencia Artificial, la economía global y el mercado de trabajo actual enfrenta niveles de incertidumbre y ansiedad sin precedentes.
 
