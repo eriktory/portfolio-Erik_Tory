@@ -2,7 +2,7 @@
 title: "El Rol del Liderente \nen la Gestión Empresarial en la Era de la IA"
 ---
 
-![](/src/assets/images/Retrato-ErikTory-FT.webp "Lcdo. Erik Tory")
+![](/images/Retrato-ErikTory-FT.webp "Lcdo. Erik Tory")
 
 ***Liderente Polimata  Polivalente***
 
