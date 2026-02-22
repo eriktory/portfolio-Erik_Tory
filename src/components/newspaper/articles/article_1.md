@@ -7,14 +7,14 @@ title: "¿Está su organización gestionando el éxito o \nsimplemente está adm
 
 **LIDERAZGO Y GERENCIA**
 
-**Latam, 2026** — 
+**Latam, 2026**
+
+
 **¿Administrar o Liderar?**
-
-
 **El Desafío de la Gestión en la Era de la IA**
 
 
- Actualmente la economía global y el mercado de trabajo enfrentan niveles de incertidumbre y ansiedad sin precedentes, estos cambios se han acelerado debido a la nueva era de la **Inteligencia Artificial** y el cambio digital.
+Actualmente la economía global y el mercado de trabajo enfrentan niveles de incertidumbre y ansiedad sin precedentes, estos cambios se han acelerado debido a la nueva era de la **Inteligencia Artificial** y el cambio digital.
  
  En este escenario, la figura del **administrador tradicional** —enfocada únicamente en la medición y el control— se revela insuficiente.
 
