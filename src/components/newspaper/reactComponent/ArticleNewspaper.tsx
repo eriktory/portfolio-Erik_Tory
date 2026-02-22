@@ -21,6 +21,12 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
                 article p {
                     orphans: 3;
                     widows: 3;
+
+                    /* guionado automático con carácter de subrayado */
+                    hyphens: auto;
+                    -webkit-hyphens: auto;
+                    -ms-hyphens: auto;
+                    hyphenate-character: "_";
                 }
                 
                 /* Reducir margen del primer párrafo */
