@@ -5,11 +5,12 @@ title: "¿Está su organización gestionando el éxito o \nsimplemente está adm
 ![](/images/Retrato-ErikTory-FT.webp "Lcdo. Erik Tory")
 ***Liderente Polimata  Polivalente***
 
-# LIDERAZGO Y GERENCIA
+# ***LIDERAZGO Y GERENCIA***
 ***
 
-## ¿Administrar o Liderar?  
-## El Desafío de la Gestión en la Era de la IA
+
+## **¿Administrar o Liderar?**  
+## **El Desafío de la Gestión en la Era de la IA**
 
 
 Actualmente la economía global y el mercado de trabajo enfrentan niveles de incertidumbre y ansiedad sin precedentes, estos cambios se han acelerado debido a la nueva era de la **Inteligencia Artificial** y el cambio digital.
