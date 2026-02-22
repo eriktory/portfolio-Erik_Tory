@@ -1,5 +1,5 @@
 ---
-title: "¿Está su organización gestionando el éxito o \nsimplemente administrando una obsolescencia programada?"
+title: "¿Está su organización gestionando el éxito o \nsimplemente está administrando una obsolescencia programada?"
 ---
 
 ![](/images/Retrato-ErikTory-FT.webp "Lcdo. Erik Tory")
