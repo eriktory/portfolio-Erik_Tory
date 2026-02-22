@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 // Import content from markdown file
 import articleContentDefault from '../articles/article_1.md?raw';
 
@@ -28,7 +29,18 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
                 }
             `}</style>
             <ReactMarkdown
-                rehypePlugins={[rehypeRaw]}
+                rehypePlugins={[
+                    rehypeRaw,
+                    [rehypeSanitize, {
+                        ...defaultSchema,
+                        // you can customize allowed tags/attributes here
+                        attributes: {
+                            ...defaultSchema.attributes,
+                            // allow class on any element so tailwind classes survive
+                            '*': [...(defaultSchema.attributes?.['*'] || []), 'className', 'class'],
+                        },
+                    }],
+                ]}
                 allowDangerousHtml
                 components={{
                     // Body text
