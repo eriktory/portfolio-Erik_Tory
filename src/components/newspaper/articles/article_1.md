@@ -3,9 +3,9 @@ title: "¿Está su organización gestionando el éxito o \nsimplemente está adm
 ---
 
 ![](/images/Retrato-ErikTory-FT.webp "Lcdo. Erik Tory")
-***Liderente Polimata  Polivalente***
+***Liderente - Polimata  Polivalente***
 ***
-<br>
+<br />
 
 ## **¿Administrar o Liderar?**  
 ## **El Desafío de la Gestión en la Era de la IA**
@@ -15,8 +15,6 @@ title: "¿Está su organización gestionando el éxito o \nsimplemente está adm
 Actualmente la economía global y el mercado de trabajo enfrentan niveles de incertidumbre y ansiedad sin precedentes, estos cambios se han acelerado debido a la nueva era de la **Inteligencia Artificial** y el cambio digital.
  
 En este escenario, la figura del **administrador tradicional** (enfocada únicamente en la medición y el control), se revela insuficiente.
-
-**La Trampa de la Eficiencia sin Propósito**  
 
 El verdadero peligro para la empresa moderna no es el ahorro, sino el ahorro sin estrategia. Gestionar el éxito en tiempos de cambios exponenciales requiere más que simplemente vigilar el reloj o regatear costos tecnológicos.
 
