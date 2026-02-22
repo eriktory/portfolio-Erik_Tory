@@ -41,7 +41,6 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
                         },
                     }],
                 ]}
-                allowDangerousHtml
                 components={{
                     // Body text
                     p: ({ children, ...props }) => {
@@ -77,7 +76,7 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
                             <img
                                 src={props.src}
                                 alt={props.alt}
-                                className="max-w-[200px] w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                                className="max-w-50 w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
                             />
                             {props.title && <figcaption className="text-sm text-center mt-2 text-gray-900 font-bold w-full">{props.title}</figcaption>}
                         </figure>
