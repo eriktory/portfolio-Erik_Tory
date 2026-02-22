@@ -15,7 +15,7 @@ const { title } = post.frontmatter;
 
     <!-- Box 1: Article Title (Full Width) -->
     <div id="box1" class="w-full h-auto border-b md:border-b-2 border-black flex justify-center items-center mb-3 md:mb-4 pb-2 md:pb-3 shrink-0">
-        <h1 class="text-sm md:text-2xl lg:text-3xl font-bold uppercase text-center tracking-wide leading-tight whitespace-normal md:whitespace-pre-line">{title}</h1>
+        <h1 class="text-sm md:text-2xl lg:text-3xl font-bold uppercase text-center tracking-wide leading-tight whitespace-normal md:whitespace-pre-line">{title.replaceAll('\\n', '\n')}</h1>
     </div>
 
     <!-- Main Content Grid: Image + Article Columns (preparado para carrusel) -->
