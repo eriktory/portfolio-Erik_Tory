@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 // Import content from markdown file
 import articleContentDefault from '../articles/article_1.md?raw';
 
@@ -27,6 +28,8 @@ const ArticleNewspaper: React.FC<ArticleProps> = ({ articleContent = articleCont
                 }
             `}</style>
             <ReactMarkdown
+                rehypePlugins={[rehypeRaw]}
+                allowDangerousHtml
                 components={{
                     // Body text
                     p: ({ children, ...props }) => {

@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import rehypeRaw from 'rehype-raw';
 
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
@@ -10,6 +11,10 @@ export default defineConfig({
     enabled: false
   },
   integrations: [react()],
+
+  markdown: {
+    rehypePlugins: [rehypeRaw],
+  },
 
   vite: {
     plugins: [tailwindcss()]
