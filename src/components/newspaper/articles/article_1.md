@@ -5,8 +5,10 @@ title: "¿Está su organización gestionando el éxito o \nsimplemente está adm
 ![](/images/Retrato-ErikTory-FT.webp "Lcdo. Erik Tory")
 ***Liderente Polimata  Polivalente***
 
-# ***LIDERAZGO Y GERENCIA***
+***LIDERAZGO Y GERENCIA***
 ***
+
+
 
 
 ## **¿Administrar o Liderar?**  
