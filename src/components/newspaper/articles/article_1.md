@@ -4,10 +4,7 @@ title: "¿Está su organización gestionando el éxito o \nsimplemente está adm
 
 ![](/images/Retrato-ErikTory-FT.webp "Lcdo. Erik Tory")
 ***Liderente Polimata  Polivalente***
-
-***LIDERAZGO Y GERENCIA***
 ***
-
 
 
 
@@ -19,7 +16,8 @@ Actualmente la economía global y el mercado de trabajo enfrentan niveles de inc
  
 En este escenario, la figura del **administrador tradicional** —enfocada únicamente en la medición y el control— se revela insuficiente.
 
-**La Trampa de la Eficiencia sin Propósito**
+**La Trampa de la Eficiencia sin Propósito**  
+
 El verdadero peligro para la empresa moderna no es el ahorro, sino el ahorro sin estrategia. Gestionar el éxito en tiempos de cambios exponenciales requiere más que simplemente vigilar el reloj o regatear costos tecnológicos. En otras palabras: **"La eficiencia sin propósito es, simplemente, un camino más rápido hacia la irrelevancia"**.
 
 A través de las próximas entregas, exploraremos cómo navegar esta complejidad mediante la evolución de los roles directivos:
